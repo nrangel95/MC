@@ -65,3 +65,5 @@ echo $(($1+$2))
 ##### Nota: Cabe resaltar que al ejecutarlo debemos introducir dos números naturales como parámetros.
 
 ---
+
+#### Quinto Punto: Escriba un reloj en bash que utilice date, figlet, sleep, while y clear.
