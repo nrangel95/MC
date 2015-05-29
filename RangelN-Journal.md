@@ -50,6 +50,68 @@ Al llegar al laboratorio, lo primero que hicimos fue desarrollar el Taller 1, d�
 
 Posteriormente, a las 11 a.m., cuando comenzó la magistral, creamos una cuenta en SDF (Super Dimension Fortress). En esta comunidad virtual, el profesor nos mostró diferentes tipos de software y aplicativos. 
 
-Luego repasamos distintos comandos básicos y sintáxis de Git, bash y awk
+Luego repasamos distintos comandos básicos y sintáxis de Git, bash y awk. De este ejercicio lo más importantepara recordar es lo siguiente: 
 
-Posteriormente 
+### BASH
+
+**Loops en Bash** 
+```
+for i in {lim1..lim2}
+do
+echo $((i**2)) >> newfile.txt  (Ejemplo)
+done
+```
+
+**Scripts en Bash**
+
+*en el script*
+```
+#!/bin/bash
+
+echo $1, $2
+ó 
+
+echo $(($1 + $2))
+```
+
+*en la terminal, para ejecutarlo*
+```
+./script.sh a b   (Donde a y b son parámetros introducidos por el usuario)
+```
+**Pasar variable de bash a awk** -->  `awk -v varawk = $varbash
+
+**Asignar un valor aleatorio a una variable** --> `Valor = $(RANDOM%rango)
+
+### Git
+
+Crear el archivo readme
+`touch README.md`
+
+Inicializar un Git
+`git init`
+
+Añadir el archivo readme al archivo
+`git add README.md`
+
+Añadir la versión con su respectivo mensaje
+`git commit -m "comentario"`
+
+Subir los cambios realizados al master
+`git push -u origin master`
+
+Ver el historial de commits
+`git log`
+
+Para recuperar commits perdidos 
+`git checkout (hash del commit de interés) `
+
+---
+
+## Último punto del día 
+
+La última actividad del día fue verificar que podemos recuperar commits que hayan sido eliminados; esto lo realizamos haciendo un commit, borrándolo, ingresando al historial de commits y usando el hash encontrado en dicho historial.
+
+El punto B de esta actividad fue desomprimir un archivo y encontrar la fecha del segundo commit realizado.  De esto averiguamos que dicho commit fue el sábado 5 de enero de 2013 a las 19:28:57 y que el tema de la semana 15 en el primer syllabus del curso era el Método de Inferencia Bayesiana.
+
+
+
