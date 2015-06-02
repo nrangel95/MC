@@ -163,5 +163,19 @@ Una vez se copió todo el texto correspondiente a la tabla de eventos modernos, 
 
 **Tercer Punto (log)**
 
+10 MILLONES DE DÍGITOS DE PI
 
+Lo primero que hice fue descargar el contenido de la página de internet con `curl` desde la terminal. 
+Luego lo copié en un editor de texto, en este caso TextWrangler. 
 
+Una vez en el editor de texto se dividió la secuencia de dígitos en grupos de 20 usando lo siguiente:
+
+```
+
+Buscar: (....................)
+
+Reemplazar: \1\n
+
+```
+
+El abrazar entre parentésis los 20 puntos, agrupa los 20 caracteres en un grupo. Grupo que es posteriormente invocado en la parte de reemplazar con el \1. Luego el adicionar el \n introduce una nueva línea separando así el archivo en grupos de 20 dígitos. 
