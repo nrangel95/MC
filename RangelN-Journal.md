@@ -116,15 +116,42 @@ El punto B de esta actividad fue desomprimir un archivo y encontrar la fecha del
 --- 
 ##2 de Junio, 2015
 
-Poner acá todo lo de gnuplot y otras cosas
-
 ###Expresiones Regulares
 
 Entiéndase una expresión regular (también llamadas regex o patrones) como "una cadena de caracteres que describe un conjunto de cadenas de caracteres sin enumerar sus elementos."
 
+Existen algunos símbolos que es importante conocer cuando se tratan expresiones regulares: 
+
+Símbolo | Significado
+--------|-----------
+^       | Inicio de línea
+  .     |  Cualquier caracter
+$       | Al final de la línea
+.*      | Cualquier caracter con 0 o más ocurrencias
+.+      | Cualquier caracter con 1 o más ocurrencias
+ a \| b | a ó b
+ \d     | Todos los caracteres que son dígitos
+ \D     | Todos los caracteres que no son dígitos
+ [a-b]  | Rango de números o letras
+ 
+*Nota:* Se debe usar backslash (\ ) para denotar caracteres especiales. 
+
+###Gnuplot
+
+Gnuplot es un programa que puede ser accesado desde la terminal que nos permite realizar distintas gráficas. 
+
+En caso de necesitarse, se debe acomodar los rangos de los ejes de la siguiente manera `[a:b]`. Primero, se establece el rango para el eje X y luego el eje Y. Ejemplo: `gnuplot [0:2*pi] [-1:1] sin(x)`
+
+También se explicó que es posible establecer los rótulos de los ejes, el título de la gráfica y otras propiedades de la tabla recuerriendo a distintos comandos para `set`. (Ver manual) Ejemplo: `set xlabel "tiempo"`
+
+Por último, se mencionó que es posible utilizar gnupot para graficar datos presentes en otros archivos. 
+Ejemplo: `plot "archivo.csv" using 2:3 ` (Donde las columnas 2 y 3 del archivo archivo.csv serán los valores para X y Y, respectivamente. 
+
+
+
 ###Hands-on
 
-**Primer Punto** 
+**Primer Punto (log)** 
 
 Si queremos generar un match para 4 caracteres cualquiera que estén ubicados al comienzo de una línea, seguidos de un espacio, la expresión regular sería la siguiente: `^.... ` 
 
@@ -133,4 +160,8 @@ De esto debemos recordar que `^` simboliza que el patrón debe estar al comienzo
 **Segundo Punto**
 
 Una vez se copió todo el texto correspondiente a la tabla de eventos modernos, recurriendo a los reemplazos de sed fue posible acomodar todo el texto en dos columnas separadas por un tab. Y luego cambiamos el formato por un .tsv
+
+**Tercer Punto (log)**
+
+
 
