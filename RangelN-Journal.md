@@ -113,5 +113,24 @@ La última actividad del día fue verificar que podemos recuperar commits que ha
 
 El punto B de esta actividad fue desomprimir un archivo y encontrar la fecha del segundo commit realizado.  De esto averiguamos que dicho commit fue el sábado 5 de enero de 2013 a las 19:28:57 y que el tema de la semana 15 en el primer syllabus del curso era el Método de Inferencia Bayesiana.
 
+--- 
+##2 de Junio, 2015
 
+Poner acá todo lo de gnuplot y otras cosas
+
+###Expresiones Regulares
+
+Entiéndase una expresión regular (también llamadas regex o patrones) como "una cadena de caracteres que describe un conjunto de cadenas de caracteres sin enumerar sus elementos."
+
+###Hands-on
+
+**Primer Punto** 
+
+Si queremos generar un match para 4 caracteres cualquiera que estén ubicados al comienzo de una línea, seguidos de un espacio, la expresión regular sería la siguiente: `^.... ` 
+
+De esto debemos recordar que `^` simboliza que el patrón debe estar al comienzo de una línea, `.` representa cualquier caracter y que el espacio se simboliza de la misma manera.
+
+**Segundo Punto**
+
+Una vez se copió todo el texto correspondiente a la tabla de eventos modernos, recurriendo a los reemplazos de sed fue posible acomodar todo el texto en dos columnas separadas por un tab. Y luego cambiamos el formato por un .tsv
 
