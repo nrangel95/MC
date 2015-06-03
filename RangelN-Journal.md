@@ -179,3 +179,27 @@ Reemplazar: \1\n
 ```
 
 El abrazar entre parentésis los 20 puntos, agrupa los 20 caracteres en un grupo. Grupo que es posteriormente invocado en la parte de reemplazar con el \1. Luego el adicionar el \n introduce una nueva línea separando así el archivo en grupos de 20 dígitos. 
+
+---
+
+##3 de Junio, 2015
+
+En el laboratorio realizamos un taller dónde practicamos el uso de `sed` y Gnuplot.  (Remitirse a Talleres/Taller2) 
+
+En la primera parte, tuvimos que realizar varios reemplazos para convertir un arvhivo .dat en uno .tsv y luego determinar cual fue el sector que tuvo el menor cambio porcentual. 
+
+En la segunda parte, repetimos el ejercicio de la magistral del segundo de Junio, 2015, pero con los datos orbitales de Saturno. 
+
+---- 
+
+En la Magistral,  Juan David nos mostró la manera de abstraer información de una página html para hacer gráficas con gnuplot. 
+
+Se enseñó el código `w3n [dirección_URL]`, el cuál renderiza el contenido .html de la página en la terminal. 
+Luego corto con un `grep` aquello que me interesa del código y los uso como datos para mi gráfica en Gnuplot. 
+
+Por último, comprobamos la eficiencia de distintos lenguajes de programación. Se hicieron 3 scripts en los que la tarea era imprimir el primer millón de números enteros en la terminal.  
+La conclusión de esta actividad fue que python y C son muchos más eficientes que Bash. 
+
+--- 
+
+
