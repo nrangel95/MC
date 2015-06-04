@@ -89,3 +89,24 @@ rm Sectores.tsv
 ## gnuplot
 
 1. Haga con [Saturno](http://nssdc.gsfc.nasa.gov/planetary/factsheet/saturniansatfact.html) lo mismo que hicimos con Júpiter: limpiar el archivo llevándolo a formato `csv` y hacer una gráfica con `gnuplot` que evalúe la tercera ley de Kepler. Hay que tener especial cuidado con la columna para el periodo de rotación.
+
+Para la primera parte, el archivo se "limpió" recurriendo al editor de texto TextWrangler. En este programa se realizaron varios reemplazos, por ejemplos cambiando los tabs por comas, siguiendo las convenciones que están registradas en mi journal en la clase del 2 de Junio. Una vez, el archivo .csv está listo para ser utilizado para la gráfica entramos a la plataforma de Gnuplot en la terminal. 
+
+Ya en la terminal se nos pedía comprobar la tercera ley de Kepler que enuncia que el cuadrado del periodo orbital de un cuerpo es porporcional al cubo de su semi-eje mayor. Para realizar esto, utilicé el siguiente código.
+
+
+```
+gnuplot
+
+set title "Tercera Ley de Kepler"
+
+set xlabel "Cuadrado del Periodo"
+
+set ylabel "Eje Mayor al Cubo"
+
+quad(x) = x**2
+cube(x) = x**3
+
+set datafile separator "," 
+
+plot "Saturno.txt" using (quad($4)):(cube($2))
