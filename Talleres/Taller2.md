@@ -109,4 +109,8 @@ cube(x) = x**3
 
 set datafile separator "," 
 
-plot "Saturno.txt" using (quad($4)):(cube($2))
+plot "Saturno.csv" using (quad($4)):(cube($2))
+
+```
+
+*Nota: Considero que los comandos son muy dicientes, razón por la cual no los comenté.*
