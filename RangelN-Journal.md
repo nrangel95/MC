@@ -4,11 +4,11 @@
 
 **Herramientas del curso:**
 
-- +Git
-- +GitHub 
-- +Bash
-- +C
-- +Python 
+- Git
+- GitHub 
+- Bash
+- C
+- Python 
 
 **Los métodos a estudiar son:**
 
@@ -190,16 +190,25 @@ En la primera parte, tuvimos que realizar varios reemplazos para convertir un ar
 
 En la segunda parte, repetimos el ejercicio de la magistral del segundo de Junio, 2015, pero con los datos orbitales de Saturno. 
 
----- 
-
-En la Magistral,  Juan David nos mostró la manera de abstraer información de una página html para hacer gráficas con gnuplot. 
-
-Se enseñó el código `w3n [dirección_URL]`, el cuál renderiza el contenido .html de la página en la terminal. 
-Luego corto con un `grep` aquello que me interesa del código y los uso como datos para mi gráfica en Gnuplot. 
-
-Por último, comprobamos la eficiencia de distintos lenguajes de programación. Se hicieron 3 scripts en los que la tarea era imprimir el primer millón de números enteros en la terminal.  
-La conclusión de esta actividad fue que python y C son muchos más eficientes que Bash. 
+---
 
 --- 
+
+##5 de Junio, 2015
+
+###LABORATORIO
+
+Durante la sesión, el profesor enseñó de manera breve la manera de ejecutar iteraciones en archivos en Bash, siguiendo el modelo que se presenta a continuación: 
+
+``` 
+for file in $(ls)
+do 
+(Instrucción involucrando $file)
+done
+```
+
+También se mencionó que es posible filtrar los archivos sobre los cuales quiero hacer las iteraciones agregando condiciones en el "rango". Ejemplo: `for file in $(ls *.c) ` (En este ejemplo las iteraciones se realizarán sobre todos los archivos cuya extensión sea .c  .
+
+
 
 
