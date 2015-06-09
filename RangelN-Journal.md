@@ -209,6 +209,67 @@ done
 
 También se mencionó que es posible filtrar los archivos sobre los cuales quiero hacer las iteraciones agregando condiciones en el "rango". Ejemplo: `for file in $(ls *.c) ` (En este ejemplo las iteraciones se realizarán sobre todos los archivos cuya extensión sea .c  .
 
+###Magistral
+
+Se explicó de manera breve la sintaxis del lenguaje C. 
+
+```
+ Imprimir el contenido de la variable.
+ 
+ printf("%d, \n")
+ printf(variable1)
+```
+
+Luego seguimos on el lenguaje de Python, de este sólo alcanzamos a aprender la manera en la que se introducen datos como parámetros. 
+
+```
+entrada=raw_input("Introduzca un número") #Este comando recibe un parámetro del usuario y lo guarda en una variable. 
+```
+
+
+---
+
+##9 de Junio, 2015
+
+###MAGISTRAL
+
+Lo primero que hicimos al llegar a clase fue abrir un notebook en iPython y ver que tipo de estilos podemos implementar en nuestras gráficas. 
+
+Luego, Juan demostró una manera de solucionar el problema de los 3 cuerpos en Matplotlib. 
+
+####Hands-On
+
+**MAKE** 
+
+Make fue inventado para poder manejar grupos grandes de archivos dependientes entre sí u otros grupos. Con Make podemos actualizar automáticamente grupos de archivos, analizarlos y dar respuesta a problemas informáticos.
+
+Un ejemplo de un grupo de archivos que dependen de otro está representado en la Imagen 1. 
+
+![Image 1](http://software-carpentry.org/v4/make/rules/003.png "Dependencias")
+
+
+
+*Reglas* 
+
+Como la idea de MAKE es ser eficiente en el manejo de muchos archivos, existen reglas que nos permiten evitar las redundancias en la línea de código para acelerar el proceso. 
+
+En este caso, en vez de escirbir esto: (Lo cual significa que los archivos de la izquierda dependen de los de la derecha) 
+
+``` 
+figure-1.csv : data1.dat
+figure-2.csv : data2.dat
+figure-3.csv : data3.dat
+```
+
+Podemos recurrir a una regla de patrón común para resumir esas tres líneas en una sola.
+
+```
+figure-%.csv : data%.dat
+```
+
+En este caso el % actua como un *wildcard* el cual debe asumir el mismo valor a los dos lados de los dos puntos.
+
+
 
 
 
