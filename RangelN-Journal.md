@@ -246,6 +246,7 @@ Make fue inventado para poder manejar grupos grandes de archivos dependientes en
 Un ejemplo de un grupo de archivos que dependen de otro está representado en la Imagen 1. 
 
 ![Image 1](http://software-carpentry.org/v4/make/rules/003.png "Dependencias")
+Imagen 1.
 
 
 
@@ -269,6 +270,30 @@ figure-%.csv : data%.dat
 
 En este caso el % actua como un *wildcard* el cual debe asumir el mismo valor a los dos lados de los dos puntos.
 
+Sin embargo, así Make cree automáticamente los archivos, el usuario debe designar la dependencia que exista entre ellos.  
+
+En últimas, el código que soluciona este problema está registrado en la Imagen 2.
+
+![Image 2](http://software-carpentry.org/v4/make/rules/019.png)
+Imagen 2.
+
+ ---
+ Existen muchos otros tipos de reglas que no explicaré en este repositorio, pero que pueden ser consultados en esta página sobre [make](http://software-carpentry.org/v4/make/).
+ 
+ 
+ 
+ 
+ 
+ ##Proyecto Final 
+ 
+ **9 de Junio, 2015**
+ 
+ Para el proyecto final quiero hacer algo que tenga alguna relación con la carrera que estudio, Geociencias. 
+ Aún no sé que hacer con claridad pero, en principio, podría usar software de graficación como Matplotlib y python para realizar diagramas de análisis geoquímico ya que estos son considerablemente complicados de hacer en programas tradicionales como Excel. 
+ 
+ A grandes rasgos, el programa podría funcionar como un script dónde el usuario solo deba introducir como parámetro los valores correspondientes a la composición química de la roca y el programa devuelva a que serie pertenece la roca y qué posible origen tenga. 
+ 
+ 
 
 
 
