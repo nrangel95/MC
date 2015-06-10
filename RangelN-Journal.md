@@ -281,6 +281,19 @@ Imagen 2.
  Existen muchos otros tipos de reglas que no explicaré en este repositorio, pero que pueden ser consultados en esta página sobre [make](http://software-carpentry.org/v4/make/).
  
  
+ ---
+ 
+##10 de Junio, 2015
+
+###Laboratorio
+
+Durante el laboratorio comenzamos nuestro primer experimento, el objetivo del mismo era comprobar que las rapideces de las partículas en un gas están moduladas por la distribución de Rayleigh. Para hacer esto tuvimos que recurrir a Matplotlib, al graficar tanto la función de Rayleigh como las velocidades de las partículas pudimos comprobar la similitd entre ambos comportamientos. 
+
+
+Empezamos a hablar sobre las distintas caraterísticas que podemos usar de Matplotlib en nuestros proyectos. 
+Juan nos mostró ejemplos de animaciones y gráficas hechas con este programa el cual nos permite variar en gran medida el estilo y funcionalidad de las mismas. 
+
+ 
  
  
  
