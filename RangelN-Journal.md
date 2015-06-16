@@ -392,6 +392,11 @@ show()
  **15 de Junio, 2015**
  
  El `subplot`, función de **Matplotlib**, puede ser una herramienta indispensable para obtener varios diagramas geoquímicos simultáneamente. Remitirse a la case del 10 de junio (Lissajous figures). 
+
+**16 de Junio, 2015**
+
+Revisar este [link](https://www.wakari.io/sharing/bundle/bultako/CursoPythonCientifico?has_login=False) Tiene bastantes tips útiles sobre el manejo de python. 
+
  
 
 
