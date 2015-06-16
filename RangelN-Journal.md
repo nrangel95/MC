@@ -107,7 +107,7 @@ Para recuperar commits perdidos
 
 ---
 
-## Último punto del día 
+### Último punto del día 
 
 La última actividad del día fue verificar que podemos recuperar commits que hayan sido eliminados; esto lo realizamos haciendo un commit, borrándolo, ingresando al historial de commits y usando el hash encontrado en dicho historial.
 
@@ -300,20 +300,48 @@ Juan nos mostró ejemplos de animaciones y gráficas hechas con este programa el
  
  ```
 %pylab inline
- 
+
+#Establecer el tamaño de la gráfica. 
 figure(figsize=(10,10))
+
+#Delimitar el rango para t.
 t=linspace(0, 2*pi, 100)
     
+#Para cada iteración creo 3 constantes aleatorias, el subplot generará los 25 paneles que se piden.  
 for i in range(0,25):
-    A=randint(0,9)
-    B=randint(0,9)
-    C=randint(0,9)
+    A=randint(1,9)
+    B=randint(1,9)
+    C=randint(1,9)
         
     subplot(5,5,i+1)    
     plot(cos(A*t), sin(B*t+C))
     plt.axis("off")
  
  ```
+ El resultado del anterior código se ve así: 
+ 
+ ![alt text](https://cloud.githubusercontent.com/assets/12629060/8174200/cf67a130-13d9-11e5-8df4-57ae84246713.png)
+ **Lissajous figures**
+ 
+ 
+ --- 
+ 
+##15 de Junio, 2015
+
+###Tarea: Apuntes sobre Landau
+
+En el capítulo 2 de *A Survey of Comptational Physics*, escrito por Rubin Landau et al., se habla sobre los errores y las incertidumbes tícipas en la computación. Dejando a un lado la sintaxis, esrte capítulo trataa sobre aquelos problemas generalmente asociados a los algoritmos presentes en los códigos. 
+
+###Tipos de Errores
+
+Tipo de Error | Descripción
+-----|------
+Teóricos | Relacionados al problema que se pretende resolver con el algoritmo, el código debe ser coherente y estar bien escrito.
+Aleatorios | Son producto de accidentes o eventos aleatorios que no se pueden controlar.
+Aproximación 1 | Relacionado con aproximaciones teóricos que no hemos considerado como series o                               integrales impropias.
+Aproximación 2 | Tiene que ver con las aproximaciones decimales que realiza el computador por default. Debemos configurar el computador para evitar esto.  
+
+
  
 ##Proyecto Final 
  
@@ -324,6 +352,9 @@ for i in range(0,25):
  
  A grandes rasgos, el programa podría funcionar como un script dónde el usuario solo deba introducir como parámetro los valores correspondientes a la composición química de la roca y el programa devuelva a que serie pertenece la roca y qué posible origen tenga. 
  
+ **15 de Junio, 2015**
+ 
+ El `subplot`, función de **Matplotlib**, puede ser una herramienta indispensable para obtener varios diagramas geoquímicos simultáneamente. Remitirse a la case del 10 de junio (Lissajous figures). 
  
 
 
