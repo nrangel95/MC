@@ -336,10 +336,12 @@ En el capítulo 2 de *A Survey of Comptational Physics*, escrito por Rubin Landa
 
 Tipo de Error | Descripción
 -----|------
-Teóricos | Relacionados al problema que se pretende resolver con el algoritmo, el código debe ser coherente y estar bien escrito.
-Aleatorios | Son producto de accidentes o eventos aleatorios que no se pueden controlar.
-Aproximación 1 | Relacionado con aproximaciones teóricos que no hemos considerado como series o                               integrales impropias.
-Aproximación 2 | Tiene que ver con las aproximaciones decimales que realiza el computador por default. Debemos configurar el computador para evitar esto.  
+Teóricos | Relacionados al problema que se pretende resolver con el algoritmo, el código debe ser coherente y estar bien escrito. Este tipo de errores dependen del usario ya que están relacionados al planteamiento del problema.
+Aleatorios | Son producto de accidentes o eventos aleatorios que no se pueden controlar. Depende netamente del azar.
+Aproximación 1 | Relacionado con aproximaciones teóricos que no hemos considerado como series o                               integrales impropias. Depende del número de iteraciones que puede hacer la máquina.
+Aproximación 2 | Tiene que ver con las aproximaciones decimales que realiza el computador por default. Debemos configurar el computador para evitar esto. En principio suelen ser aproximaciones pequeñas pero el aplicarlas consecutivamente afecta considerablemente el resultado. 
+
+El capítulo le presta especial atención a las maneras en las que el usuario puede evitar este tipo de errores. Para cada problema hay que designar un momento para analizar y reducir las diferentes fuentes de error que se presentarán en el código. Generalmente, el aplicar cálculos más intensivos que reemplacen operaciones complicadas, como integrales, factoriales, exponenciales, etc., puede reducir el error notablemente. 
 
 
  
