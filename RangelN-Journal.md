@@ -343,7 +343,42 @@ Aproximación 2 | Tiene que ver con las aproximaciones decimales que realiza el 
 
 El capítulo le presta especial atención a las maneras en las que el usuario puede evitar este tipo de errores. Para cada problema hay que designar un momento para analizar y reducir las diferentes fuentes de error que se presentarán en el código. Generalmente, el aplicar cálculos más intensivos que reemplacen operaciones complicadas, como integrales, factoriales, exponenciales, etc., puede reducir el error notablemente. 
 
+----
 
+##16 de Junio, 2015
+
+**Magistral**
+
+Juan dictó una clase sobre los distintos tipos de interpolaciones que existen. Se habló sobre Lagrange, interpolaciones lineales, cuadráticos, cúbicos, trigonométricos, etc. Revisar `poly1d`(numpy) y `curvefit`(scipy), puede ser de utilidad para hacer este tipo de ajustes.
+
+**Hands-on**
+###Notas de como realizar ajustes (Punto1)
+```
+#Descargar librerias y arvhivos necesarios, luego separar las columnas en abscisas y ordenadas.
+%pylab inline
+data=genfromtxt("polyunkown.csv", delimiter=",")
+poliX=data[:,0]
+poliY=data[:,1]
+
+#El polyfit me da los coeficientes que acompañan el polinomio, el tercer parámetro es el grado del polinomio resultante.
+coef4=polyfit(poliX, poliY, 4)
+coef5=polyfit(poliX, poliY, 5)
+coef7=polyfit(poliX, poliY, 7)
+
+#poly1d contruye los polinomios a partir de los coeficientes. 
+p5 = poly1d(coef5)
+p4 = poly1d(coef4)
+p7 = poly1d(coef7)
+
+#Grafico todos los ajustes para determinar cual de todos es el que mejor se adapta al polinomio desconocido. 
+scatter(poliX, poliY)
+figure(figsize=(10,10))
+plot(poliX, p5(poliX), color = "red")
+plot(poliX, p4(poliX), color = "green")
+plot(poliX, p7(poliX), color = "purple")
+show()
+
+```
  
 ##Proyecto Final 
  
