@@ -430,6 +430,15 @@ show()
 print (Xinter, campoB(Xinter))
 
 ```
+###17 de Junio, 2015
+
+**Laboratorio**
+
+Lo más notable sobre el laboratorio fue aprender a manejar interpolaciones (Refer to [Taller4](https://github.com/nrangel95/MC/blob/master/Talleres/Taller4.md). Lo más útil para recordar de esta clase es que siempre que quiera hacer interpolaciones debo importar la siguiente libreria con el siguiente código `from scipy import interpolate`. Esta libreria contiene dos funciones fundamentales: `interpolate.interp1d(x, y, kind='linear')` que le entran como parámetros dos arreglos y el tipo de ajuste de interés y `interpolate.lagrange()` el cual nos devuelve el ajuste polinomial de lagrange. Ambos son muy fáciles de usar. 
+
+**Magistral** 
+
+
  
 ##Proyecto Final 
  
