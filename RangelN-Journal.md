@@ -379,6 +379,57 @@ plot(poliX, p7(poliX), color = "purple")
 show()
 
 ```
+
+
+###Segundo Punto del Hands-On
+
+```
+%pylab inline
+from scipy.optimize import curve_fit
+
+#Creo los arreglos especificados en el enunciado.
+x=[2.3, 2.8, 3.2, 3.7, 4.3]
+y=[34745, 19689, 12594, 7982, 5822]
+
+#Tal como lo hicimos en el experimento, se define una función que represente el campo magnético B.
+def ajustecampoB(r,m):
+    return ((0.2)*m)/(r**3)
+
+#NOTA: No se porque debo primero definir r y luego m, de otra manera el ajuste no funciona.
+
+#Esta parte se encarga de devolver la coeficiente para el mejor ajuste.
+fitpars,covmat= curve_fit(ajustecampoB,x,y)
+
+XX=linspace(2, 5, 100)
+scatter(x, y, label= "Datos del enunciado")
+plot(XX,ajustecampoB(XX, *fitpars), color="green", label="Ajuste del Campo Magnético")
+xlabel("Posición en x")
+ylabel("Campo Magnético")
+legend()
+show()
+
+#Interpolar datos
+m=2118294.96442 #Dato obtenido del fitpars
+def campoB(r):
+        return ((0.2)*m)/(r**3)
+
+#Establezco todas las propiedades de la gráfica, consta de los datos del enunciado, el ajuste y los datos interpolados. 
+figure=figsize(10,10)
+Xinter=linspace(2.3,4.8,100)    
+XX=linspace(2, 5, 100)
+scatter(x, y, label= "Datos del enunciado")
+plot(XX,ajustecampoB(XX, *fitpars), color="green", label="Ajuste del Campo Magnético")
+scatter(Xinter, campoB(Xinter), color="red", label="Datos Interpolados")
+xlabel("Posición en x")
+ylabel("Campo Magnético")
+legend()
+show()
+
+#Si se necesita una tabla con los datos interpolados. 
+
+print (Xinter, campoB(Xinter))
+
+```
  
 ##Proyecto Final 
  
