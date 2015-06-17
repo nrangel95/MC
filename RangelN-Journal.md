@@ -438,7 +438,14 @@ Lo más notable sobre el laboratorio fue aprender a manejar interpolaciones (Ref
 
 **Magistral** 
 
+Juan nos habló más sobre el manejo de ramas en Git. Vimos la manera en la que puede trabajarse en una rama entre dos o más usuarios de Github Ver más sobre esto en el Hands-On. 
 
+Luego vimos el Análisis de Fourier, sirve para analizar imágenes, archivos de audio, filtros, entre otros.
+Ciertas operaciones se facilitan mucho usando las transformadas de Fourier. 
+
+###Hands-On
+
+ 
  
 ##Proyecto Final 
  
