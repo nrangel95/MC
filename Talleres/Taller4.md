@@ -64,6 +64,63 @@ show()
 ```
 ##2.1)D)
 
+```
+%pylab inline
+
+
+#Punto (d)
+#Defino los datos tomados de la tabla
+x = array([-3,-2,-1,0,1,2,3])
+
+yPulso = array([0,0,0,1,0,0,0])
+yEscalon = array([0,0,0,1,1,1,1])
+
+#Empezaré a hacer las interpolaciones, por lo cual descargo la libreria de interés
+from scipy import interpolate
+
+cubicPuls = interpolate.interp1d(x,yPulso,kind='cubic')
+cubicEsc = interpolate.interp1d(x,yEscalon,kind='cubic')
+
+poliPuls = interpolate.lagrange(x,yPulso)
+poliEsc = interpolate.lagrange(x,yEscalon)
+
+#Gráficos
+
+
+figure(figsize=(6, 7))
+t=linspace(-3,3,100)
+scatter(x,yPulso,color="blue",label='Datos del pulso')
+plot(t,cubicPuls(t),color="red",label='Ajuste cúbico')
+plot(t,poliPuls(t),color="purple",label='Ajuste polinomial')
+legend()
+title("Pulsatory Oscillation")
+ylim(-0.5,1.4)
+savefig("Pulso")
+
+figure(figsize=(6,5))
+t=linspace(-3,3,100)
+scatter(x,yEscalon,color="blue",label='Datos del escalón')
+plot(t,cubicEsc(t),color="red",label='Ajuste cúbico')
+plot(t,poliEsc(t),color="purple",label='Ajuste polinomial')
+legend(loc=4)
+title("Step Oscillation")
+savefig("Osc")
+show()
+```
+
+Las gráficas que obtuve son las siguientes:
+
+![alt text](https://cloud.githubusercontent.com/assets/12629060/8243450/5de03316-1617-11e5-91f0-ce6e8886d50d.png) 
+Gráfica 1
+
+![alt text](https://cloud.githubusercontent.com/assets/12629060/8243451/5df3c502-1617-11e5-8c35-b4e4ddcf0d0f.png) 
+Gráfica 2
+
+El comportamiento que describen los ajustes para ambos conjuntos de datos, si bien a primera vista no parece la tendencia típica de una onda estacionaria, sí pueden ser considerados movimientos oscilatorios que han sufrido algún tipo de perturbación por un agente externo alrededor del t=0. 
+
+Para el primer caso, el efectuar un pulso obre el medio en el que viaja la onda puede aumentar su amplitud momentáneamente sin embargo, esta eventualmente volverá a su amplitud y frecuencia natural.
+
+Para el segundo caso, un cambio de medio pudo haber provocado el fenómeno del escalón en la onda.
 
 3. La implementación de cierto algoritmo necesita puntos uniformemente muestreados pero los datos que se tienen son los mostrados en la tabla de abajo. Produzca una nueva tabla con el mismo número de líneas pero con muestreo uniforme usando un *cubic spline* .
 
@@ -110,7 +167,8 @@ Y=AjusteCubico(t)
 
 #Imprimir nueva tabla uniformemente espaciada
 for i in range(24):
-    print(t[i],Y[i])
+   print ("  x  |  y  \n -----|-----")
+   print(t[i],"|", Y[i])
 ```
     
 
