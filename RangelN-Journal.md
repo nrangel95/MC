@@ -432,7 +432,7 @@ print (Xinter, campoB(Xinter))
 ```
 
 El resultado del ajuste se ve a continuación:
-[alt text](https://cloud.githubusercontent.com/assets/12629060/8243510/de430e52-1617-11e5-895d-bc4437101098.png)
+![alt text](https://cloud.githubusercontent.com/assets/12629060/8243510/de430e52-1617-11e5-895d-bc4437101098.png)
 
 ###17 de Junio, 2015
 
