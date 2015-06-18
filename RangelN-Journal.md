@@ -430,6 +430,10 @@ show()
 print (Xinter, campoB(Xinter))
 
 ```
+
+El resultado del ajuste se ve a continuación:
+[alt text](https://cloud.githubusercontent.com/assets/12629060/8243510/de430e52-1617-11e5-895d-bc4437101098.png)
+
 ###17 de Junio, 2015
 
 **Laboratorio**
@@ -443,9 +447,6 @@ Juan nos habló más sobre el manejo de ramas en Git. Vimos la manera en la que 
 Luego vimos el Análisis de Fourier, sirve para analizar imágenes, archivos de audio, filtros, entre otros.
 Ciertas operaciones se facilitan mucho usando las transformadas de Fourier. 
 
-###Hands-On
-
- 
  
 ##Proyecto Final 
  
