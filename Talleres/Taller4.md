@@ -122,7 +122,11 @@ El comportamiento que describen los ajustes para ambos conjuntos de datos, si bi
 
 Para el primer caso, el efectuar un pulso obre el medio en el que viaja la onda puede aumentar su amplitud momentáneamente sin embargo, esta eventualmente volverá a su amplitud y frecuencia natural.
 
-Para el segundo caso, un cambio de medio pudo haber provocado el fenómeno del escalón en la onda.
+Para el segundo caso, un cambio de medio pudo haber provocado el fenómeno del escalón en la onda, manteniendo así su amplitud pero modificando la energía liberada.
+
+---
+
+###Tercer Punto
 
 3. La implementación de cierto algoritmo necesita puntos uniformemente muestreados pero los datos que se tienen son los mostrados en la tabla de abajo. Produzca una nueva tabla con el mismo número de líneas pero con muestreo uniforme usando un *cubic spline* .
 
