@@ -62,6 +62,8 @@ show()
 
 #coefCorrelación=stats.pearsonr(senx,AjusteCualquiera(x))
 ```
+Si se llegase a aumentar el numero de datos en los arreglos iniciales (x, sen(x) ) sin actualizar los ajustes ya obtenidos, el ajuste lineal es el que tendría menor coeficiente de correlacion con el nuevo conjunto de datos ya que es el que menos se ajusta al comportamiento de una función sinusoidal por su carencia de curvatura en los datos intermedios a los máximos y mínimos.
+
 ##2.1)D)
 
 ```
