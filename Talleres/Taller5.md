@@ -1,5 +1,7 @@
 ##Taller 5
 
+El taller lo realicé en el siguiente [notebook](https://www.dropbox.com/s/tzpjx8k1fdl4rsi/Rayleigh.ipynb?dl=0)
+
 ###Series de Fourier
 
 1. Diseñe y ejecute un experimento numérico que le permita calcular la constante de *Wilbraham-Gibbs*. En ello puede que le resulte útil una rutina de `scipy.optimize` llamada [basinhopping](http://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.optimize.basinhopping.html). Hágalo en un cuaderno de IPython llamdo `gibbs.ipynb`. **Debe** usar *fuerza bruta* y puede asumir que la discontinuidad se da del máximo al mínimo global de las sucesivas aproximaciones a la onda cuadrada.
