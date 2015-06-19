@@ -64,3 +64,9 @@ El resultado del anterior código es este:
 ###GitHub Branches and Tags
 
 La etiqueta v0.33 correspondiente al punto 2 de este taller la puede encontrar en las pestaña de releases de mi repository MC.
+
+El código ejecutado para poder realizar la etiqueta fue el siguiente: 
+```
+git tag -a v0.33 -m "Una primera etiqueta"
+git push origin v0.33
+```
