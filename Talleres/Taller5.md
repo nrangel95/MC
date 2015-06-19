@@ -59,4 +59,8 @@ El resultado del anterior código es este:
 
 ![alt text](https://cloud.githubusercontent.com/assets/12629060/8257553/0c7f7d3a-1674-11e5-8f62-8966ce694a1e.png)
 
+---
 
+###GitHub Branches and Tags
+
+La etiqueta v0.33 correspondiente al punto 2 de este taller la puede encontrar en las pestaña de releases de mi repository MC.
