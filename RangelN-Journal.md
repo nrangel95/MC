@@ -447,6 +447,69 @@ Juan nos habló más sobre el manejo de ramas en Git. Vimos la manera en la que 
 Luego vimos el Análisis de Fourier, sirve para analizar imágenes, archivos de audio, filtros, entre otros.
 Ciertas operaciones se facilitan mucho usando las transformadas de Fourier. 
 
+###23 de Junio, 2015
+
+**Magistral**
+
+Hablar acá soobre derivadas
+
+**Hands-on**
+
+``` 
+datos=genfromtxt("monthrg.dat")
+ano=datos[:,0]
+
+promMes=datos[:,3]
+
+promSigloXX = promMes[3491:4631]
+ #Acá estoy cogiendo todos los meses de los años desde 1900 a 1995. (95*12) Y como es el último siglo tomo el último tramo del array.
+ 
+meses=linspace(1900,1995,1140)  #1140 es el nùmero de meses que contienen los años que nos interesan.
+
+figure(figsize=(10,10))
+plot(meses,promSigloXX, lw=0.4)
+xlim(1900,1995)
+ylim(0,250)
+xlabel("tiempo (aNos)")
+ylabel("Manchas solares")
+show()
+ 
+```
+Imagen acà
+
+```
+from scipy.fftpack import ifft, fft, fftfreq
+transf=fft(promSigloXX)
+
+N=1140 #Número de meses
+dt= 1  #Espaciamiento entre datos.
+
+frec=fftfreq(N, dt) #Obtengo las frecuencias. 
+
+plot(frec,abs(transf))
+
+frecMax=.02
+transf[abs(frec)>frecMax] = 0  #En esta lìnea se ejecuta el filtro, se eliminan todas las frecuencias más altas que la establecida por frecMax.
+
+
+#Plotearé el ciclo solar con ruido (Variaciones a lo largo de los años) y el ciclio limpio que obtuvimos transformando al espacio de fourier 
+#y eliminando las frecuencias altas.
+
+figure(figsize=(10,10))
+plot(meses,promSigloXX, lw=0.4, c="b")
+yLimp=ifft(transf)
+plot(meses,yLimp,c="r")
+xlim(1900,1995)
+ylim(0,250)
+xlabel("tiempo (aNos)")
+ylabel("Manchas solares")
+
+```
+Dos imágenes acá
+
+
+
+
  
 ##Proyecto Final 
  
