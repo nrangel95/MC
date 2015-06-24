@@ -451,9 +451,20 @@ Ciertas operaciones se facilitan mucho usando las transformadas de Fourier.
 
 **Magistral**
 
-Hablar acá soobre derivadas
+Juan habló sobre Juan nos habló sobre la manera en la que podemos realizar cálculos numéricos, específicamente hablamos de como podemos calcular derivadas de funciones en python. Se concluyó que la mejor manera de obtener la derivada es con la *central difference* (Ver ecuación correspondiente abajo) ya que el error de esta se propaga con el cuadrado de h y no de manera lineal. sin embargo, para saber más acerca de esto revisar lecture de Numerical Derivatives.
+
+```f′(x)=(f(x+h)−f(x−h))/2h + O(h^2)```
+
+Por último, se habló que hay unas funciones en la libreria de sympy que nos permiten obtener derivadas de manera directa.
+
 
 **Hands-on**
+
+DFT
+
+Estime la duración del ciclo solar analizando con una DFT los datos monthrg.dat. La descripción del archivo está aquí. Además utilice un filtro de altas frecuencias para obtener una gráfica similar a la mostrada abajo. log
+---
+Lo primero fue graficar las medias mensuales de las manchas solares registradas en el último siglo.
 
 ``` 
 datos=genfromtxt("monthrg.dat")
@@ -476,6 +487,8 @@ show()
  
 ```
 Imagen acà
+
+Lo que se hace a continuación es transformar el array de manchas solares, eliminar las frecuencias altas, invertir la transformación con el array ya limpio, y graficar nuevamente.
 
 ```
 from scipy.fftpack import ifft, fft, fftfreq
@@ -527,6 +540,16 @@ Dos imágenes acá
 **16 de Junio, 2015**
 
 Revisar este [link](https://www.wakari.io/sharing/bundle/bultako/CursoPythonCientifico?has_login=False) Tiene bastantes tips útiles sobre el manejo de python. 
+
+**17 de Junio, 2015**
+
+Cuando un geólogo manda unas muestra a analizar, el laboratorio devuelve sus resultados en un archivo .csv cuyo formato está ya estandarizado, es decir el orden en el que se presentan los elementos y sus composiciones es siempre el mismo por lo cual mi programa solo tendría que acomodarse a ese formato y tomar los valores necesarios para cada diagrama de columnas del .csv ya conocidas.
+
+Por decir algo, en caso de que el usuario quiera realizar un [diagrama ternario](https://es.wikipedia.org/wiki/Diagrama_ternario), debo crear una función que reciba 3 parámetros. Los parámetros serán los símbolos de los elementos o compuestos  (Ejemplo Si, Fe, TiO2, etc) e, inmediatamente, el programa reconoce estos strings como columnas del archivo que el usuario ha subido al programa. 
+
+El plotear las composiciones de los tres factores del diagrama devolverán unas ciertas coordenadas sobre un triángulo baricéntrico, como el que se describe en el anterior link. Obteniendo así la gráfica deseada lista para descargar.
+
+Próximamente subiré un ejemplo del archivo que el laboratorio envía con los resultados. 
 
  
 
