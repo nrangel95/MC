@@ -447,16 +447,34 @@ Juan nos habló más sobre el manejo de ramas en Git. Vimos la manera en la que 
 Luego vimos el Análisis de Fourier, sirve para analizar imágenes, archivos de audio, filtros, entre otros.
 Ciertas operaciones se facilitan mucho usando las transformadas de Fourier. 
 
+###19 de Junio, 2015
+
+En el laboratorio y magistral, se aprendió el manejo básico de realizar un ajuste en el espacio de Fourier.
+
+Lo más importante sobre esta clase fue aprender a manejar las transformadas de Fourier (Refer to [Taller5](https://github.com/nrangel95/MC/blob/master/Talleres/Taller5.md). Acá vemos como aproximamos la función seno usando series de Fourier.
+
+A continuación, se puede ver una onda cudrada obtenida a partir de las series ya mencionadas.
+
+![alt text](https://cloud.githubusercontent.com/assets/12629060/8257523/d469d7f6-1673-11e5-8ac7-79534517698e.png)
+
+Resumen de los códigos usados más importantes:
+```
+fft(arreglo) #Transformada de fourier discreta de un arreglo de una dimensión.
+
+fft2(arreglo) #Transformada de fourier discreta de un arreglo de dos dimensiones.
+
+fftshift(arreglo) #Cambio de posiciones de las frecuencias que están en cero.
+```
+
 ###23 de Junio, 2015
 
 **Magistral**
 
-Juan habló sobre Juan nos habló sobre la manera en la que podemos realizar cálculos numéricos, específicamente hablamos de como podemos calcular derivadas de funciones en python. Se concluyó que la mejor manera de obtener la derivada es con la *central difference* (Ver ecuación correspondiente abajo) ya que el error de esta se propaga con el cuadrado de h y no de manera lineal. sin embargo, para saber más acerca de esto revisar lecture de Numerical Derivatives.
+Juan nos habló sobre la manera en la que podemos realizar cálculos numéricos, específicamente hablamos de como podemos calcular derivadas de funciones en python. Se concluyó que la mejor manera de obtener la derivada es con la *central difference* (Ver ecuación correspondiente abajo) ya que el error de esta se propaga con el cuadrado de h y no de manera lineal. sin embargo, para saber más acerca de esto revisar lecture de Numerical Derivatives.
 
 ```f′(x)=(f(x+h)−f(x−h))/2h + O(h^2)```
 
 Por último, se habló que hay unas funciones en la libreria de sympy que nos permiten obtener derivadas de manera directa.
-
 
 **Hands-on**
 
@@ -486,7 +504,7 @@ ylabel("Manchas solares")
 show()
  
 ```
-Imagen acà
+![alt text](https://cloud.githubusercontent.com/assets/12629060/8342565/61ee5e6e-1acd-11e5-87f3-b240f65209d2.png)
 
 Lo que se hace a continuación es transformar el array de manchas solares, eliminar las frecuencias altas, invertir la transformación con el array ya limpio, y graficar nuevamente.
 
@@ -518,10 +536,20 @@ xlabel("tiempo (aNos)")
 ylabel("Manchas solares")
 
 ```
-Dos imágenes acá
+
+Resultado Final
+![alt text](https://cloud.githubusercontent.com/assets/12629060/8342571/6d0ca210-1acd-11e5-96ef-2d6f1f272767.png)
 
 
+###24 de Junio, 2015
 
+**Laboratorio**
+
+El taller que empezamos hoy y que terminaremos el Viernes, consistió en repasar el concepto del cambio de coordenadas esféricas a coordenadas cartesianas, manejo de matrices y operaciones entre ellas. Ver más sobre esto en **26 de Junio, 2015**
+
+**Magistral**
+
+En la magistral se aprendió el manejo de métodos numéricos para resolver integrales. Estos tienen la ventaja de que no son tan pesados para los computadores y son notablemente precisos. Se prestó especial atención a las reglas de Simpson y los polinomios de Legendre y Lagrange.
 
  
 ##Proyecto Final 
