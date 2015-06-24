@@ -10,10 +10,12 @@
 	![](https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/talleres/Taller6/trip.png?raw=true =500x)
 
 **Procese el archivo para dejarlo en un formato fácil de importar a Python.**
+---
 Limpié el archivo utilizando TextWrangler, mediante diferentes reemplazos solo dejamos tres columnas separadas por una coma. En estas 6 columnas están los valores correspondientes a longitud, latitud, altura, hora, minutos y segundos, respectivamente.
 El resultado de este proceso lo guardamos en un archivo llamado datos.csv. y lo pueden encontrar en el siguiente [link](https://www.dropbox.com/s/vi67wrqaqvctoae/Datos.csv?dl=0) .
 
 **Haciendo los cambios de unidades pertinentes y teniendo en cuenta las características del [sistema de coordenadas esférico](http://mathworld.wolfram.com/SphericalCoordinates.html), calcular las coordenadas cartesianas de cada una de las posiciones registradas.**
+---
 Acá esta el código debidamente comentado:
 
 ```
@@ -52,19 +54,18 @@ print(matrizCart)
 
 ```
 
-	* ✵ Después calcular los vectores de desplazamiento espacio-temporal tomando como referencia la primera posición registrada. Desprecie la altura.
-	* ✵ Usando vectores unitarios en dirección norte y oriente, calcule las coordenadas de los vectores de desplazamiento en ese sistema de coordenadas local. Tome como coordenadas de referencia: latitud 4.5981, longitud -74.0758. Haga una gráfica con la trayectoria. Si quiere que aparezca junto con un mapa busque información sobre **smopy**. 
-	* ✵✵ Ahora calcule la distancia recorrida en función del tiempo estimando numéricamente la integral
+✵ Después calcular los vectores de desplazamiento espacio-temporal tomando como referencia la primera posición registrada. Desprecie la altura.
+✵ Usando vectores unitarios en dirección norte y oriente, calcule las coordenadas de los vectores de desplazamiento en ese sistema de coordenadas local. Tome como coordenadas de referencia: latitud 4.5981, longitud -74.0758. Haga una gráfica con la trayectoria. Si quiere que aparezca junto con un mapa busque información sobre **smopy**. 
+✵✵ Ahora calcule la distancia recorrida en función del tiempo estimando numéricamente la integral
 
-		![](https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/talleres/Taller6/dist_int.png?raw=true =200x). 
+![](https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/talleres/Taller6/dist_int.png?raw=true =200x). 
 		
 		Haga una gráfica.
-
-	![](https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/talleres/Taller6/tripdist.png?raw=true =500x).
+![](https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/talleres/Taller6/tripdist.png?raw=true =500x).
 	
-	* ✵ Estime el tiempo requerido para terminar de recorrer 1, 2 .. 9 km y la posición (en latitud y longitud) en esos instantes.
-	* ✵✵ Ahora calcule la rapidez en función del tiempo usando *forward differences*. Tenga en cuenta que los datos no están uniformemente espaciados.
+✵ Estime el tiempo requerido para terminar de recorrer 1, 2 .. 9 km y la posición (en latitud y longitud) en esos instantes.
+✵✵ Ahora calcule la rapidez en función del tiempo usando *forward differences*. Tenga en cuenta que los datos no están uniformemente espaciados.
 	
 
-	* ✵✵✵ Lo anterior debe resultar muy irregular, proponga alguna estrategia para obtener algo más razonable e impleméntela.
+✵✵✵ Lo anterior debe resultar muy irregular, proponga alguna estrategia para obtener algo más razonable e impleméntela.
 	
