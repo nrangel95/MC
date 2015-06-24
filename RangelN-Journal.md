@@ -461,9 +461,9 @@ Por último, se habló que hay unas funciones en la libreria de sympy que nos pe
 **Hands-on**
 
 DFT
-
 Estime la duración del ciclo solar analizando con una DFT los datos monthrg.dat. La descripción del archivo está aquí. Además utilice un filtro de altas frecuencias para obtener una gráfica similar a la mostrada abajo. log
----
+
+DESARROLLO:
 Lo primero fue graficar las medias mensuales de las manchas solares registradas en el último siglo.
 
 ``` 
