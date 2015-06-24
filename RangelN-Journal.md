@@ -541,7 +541,7 @@ Dos imágenes acá
 
 Revisar este [link](https://www.wakari.io/sharing/bundle/bultako/CursoPythonCientifico?has_login=False) Tiene bastantes tips útiles sobre el manejo de python. 
 
-**17 de Junio, 2015**
+**23 de Junio, 2015**
 
 Cuando un geólogo manda unas muestra a analizar, el laboratorio devuelve sus resultados en un archivo .csv cuyo formato está ya estandarizado, es decir el orden en el que se presentan los elementos y sus composiciones es siempre el mismo por lo cual mi programa solo tendría que acomodarse a ese formato y tomar los valores necesarios para cada diagrama de columnas del .csv ya conocidas.
 
