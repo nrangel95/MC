@@ -54,6 +54,8 @@ print(matrizCart)
 
 ```
 
+**El resto del desarrollo se encuentra en el siguiente [link](https://github.com/nrangel95/MC/blob/master/Talleres/Taller-6.ipynb) debidamente ejecutado y comentado.
+
 ✵ Después calcular los vectores de desplazamiento espacio-temporal tomando como referencia la primera posición registrada. Desprecie la altura.
 ✵ Usando vectores unitarios en dirección norte y oriente, calcule las coordenadas de los vectores de desplazamiento en ese sistema de coordenadas local. Tome como coordenadas de referencia: latitud 4.5981, longitud -74.0758. Haga una gráfica con la trayectoria. Si quiere que aparezca junto con un mapa busque información sobre **smopy**. 
 ✵✵ Ahora calcule la distancia recorrida en función del tiempo estimando numéricamente la integral
