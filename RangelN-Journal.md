@@ -551,6 +551,80 @@ El taller que empezamos hoy y que terminaremos el Viernes, consistió en repasar
 
 En la magistral se aprendió el manejo de métodos numéricos para resolver integrales. Estos tienen la ventaja de que no son tan pesados para los computadores y son notablemente precisos. Se prestó especial atención a las reglas de Simpson y los polinomios de Legendre y Lagrange.
 
+
+###1 de Julio, 2015
+
+**Laboratorio** 
+
+En el laboratorio del día de hoy empezamos el Taller 7, cuyo propósito era repasar métodos numéricos para resolver ecuaciones diferenciales. Sobre esto vale la pena revisar la función `odeint` de la libreria de **scipy**. 
+A su vez, para visualizar los resultados, también tuvimos que revisar las funciones de matplotlib que nos permiten graficar en 3D. Para realizar estas gráficas recordar ejecutar la siguiente línea de código: `from mpl_toolkits.mplot3d import Axes3D`
+
+Para conocer más sobre esta actividad, *ir a MC/Talleres/Taller7.*
+
+**Magistral** 
+
+Juan nos enseñó a descargar y utilizar la libreria de sympy, la cual nos permite realizar cálculos simbólicos. 
+
+Para descargarla: `pip install sympy`
+
+Para declarar símbolos: `sim sim2 = symbols('sim sim2')`
+
+Para derivar funciones: `diff(func, variableDiferenciación)`
+
+Para integrar funciones: `integrate(func, (variable, lim1, lim2))`
+
+**Hands-On**
+
+###Demuestre las ecuaciones utilizadas para los métodos de Adams-Bashforth de orden 2, 3 y 4 (ver Scherer eq. 11.72). Utilice Sympy como ayuda en los cálculos simbólicos. log
+
+Los polinomios de Lagrange son funciones que interpolan funciones continuas más complejas y la reducen a expresiones polinómicas. Se crean mediante sumatorias según el grado del polinomio que se busque. Para saber más sobre esto referirse a [Polinomios de Lagrange](http://www.matematicasvisuales.com/html/analisis/interpolacion/lagrange.html)
+
+```
+from sympy import *
+
+#Polinomio de Lagrange Grado 2
+
+t, fn, fn1, h, tn, tn1, p = symbols('t fn fn1 h tn tn1 p')
+
+tn1=tn-h
+
+p=fn1*((t-tn)/(tn1-tn)) + fn*((t-tn1)/(tn-tn1))
+
+simplify(integrate(p,(t,tn,tn+h)))
+```
+
+ La respuesta me da: h*(3*fn - fn1)/2
+ 
+ ```
+ #Polinomio de Lagrange grado 3
+
+fn2,tn2,p2=symbols('fn2 tn2 p2')
+
+tn2=tn1-h
+
+p2= fn1*(t-tn)*(t-tn2)/((tn1-tn)*(tn1-tn2))+fn*(t-tn1)*(t-tn2)/((tn-tn1)*(tn-tn2))+fn2*(t-tn)*(t-tn1)/((tn2-tn1)*(tn2-tn))
+
+simplify(integrate(p2,(t,tn,tn+h)))
+
+ ```
+ 
+ La respuesta me da: h*(23*fn - 16*fn1 + 5*fn2)/12
+ 
+ ```
+ #Polinomio de Lagrange grado 4
+
+fn3,tn3,p3=symbols('fn3 tn3 p3')
+
+
+tn3=tn2-h
+
+p3= fn1*(t-tn)*(t-tn2)*(t-tn3)/((tn1-tn)*(tn1-tn2)*(tn1-tn3))+fn*(t-tn1)*(t-tn2)*(t-tn3)/((tn-tn1)*(tn-tn2)*(tn-tn3))+fn2*(t-tn)*(t-tn1)*(t-tn3)/((tn2-tn1)*(tn2-tn)*(tn2-tn3))+fn3*(t-tn)*(t-tn1)*(t-tn2)/((tn3-tn1)*(tn3-tn)*(tn3-tn2))
+
+simplify(integrate(p3,(t,tn,tn+h)))
+
+ ```
+La respuesta me da: h*(55*fn - 59*fn1 + 37*fn2 - 9*fn3)/24
+
  
 ##Proyecto Final 
  
@@ -579,6 +653,13 @@ El plotear las composiciones de los tres factores del diagrama devolverán unas 
 
 Próximamente subiré un ejemplo del archivo que el laboratorio envía con los resultados. 
 
+**1 de Julio** 
+
+Al comentarle la idea sobre los diagramas geoquímicos a Juan me advirtió que puede que el proyecto termine siendo muy sencillo por lo que estoy pensando incluir una sección en la que el programa automáticamente realice una análisis de la roca estudiada. Es decir, al presionar un botón; el programa le dará al usuario un "diagnóstico" de la naturaleza de la roca que se está analizando. Esto puede ser del siguiente estilo: "Las muestras entregadas corresponden a una roca **ígnea**, probablemente cristalizada de una magma **altamente máfico**. Su composición en **óxidos de hierro** es muy **elevada** por lo cual se asume que correspone a la **serie toleítica.**"
+
+En el anterior texto, las palabras que están en letra cursiva varían según los datos que proporcionen los cálculos. 
+
+También será importante dedicarle un buen tiempo a la interfaz para que el programa sea amigable con el usuario. 
  
 
 
